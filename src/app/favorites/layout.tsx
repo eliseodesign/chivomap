@@ -1,6 +1,6 @@
 import { ReactNode } from '@/shared/interfaces/ReacNode'
 
-export const LayoutFavorites = ({ children } : ReactNode) => {
+export default function LayoutFavorites({ children }: ReactNode){
   return (
     <div>{ children }</div>
   )

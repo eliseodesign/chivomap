@@ -1,6 +1,6 @@
 import { ReactNode } from '@/shared/interfaces/ReacNode'
 
-export const LayoutAcount = ({ children } : ReactNode) => {
+export default function LayoutAcount ({ children } : ReactNode){
   return (
     <div>{ children }</div>
   )

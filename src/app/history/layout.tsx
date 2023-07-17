@@ -1,6 +1,6 @@
 import { ReactNode } from '@/shared/interfaces/ReacNode'
 
-export const LayoutHistory = ({ children } : ReactNode) => {
+export default function LayoutHistory({ children } : ReactNode){
   return (
     <div>{ children }</div>
   )

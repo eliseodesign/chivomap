@@ -1,4 +1,4 @@
-export const Favorites = () => {
+export default function Favorites(){
   return (
     <div>
       <h1>Tus lugares favoritos</h1>
