@@ -25,7 +25,7 @@ export const MapView = () => {
     // Verificar si estamos en el lado del cliente antes de acceder a window
     if (typeof window !== 'undefined') {
       // Código que depende de window aquí
-      console.log(window);
+      // console.log(window);
     }
   }, []);
 
