@@ -1,11 +1,10 @@
-import { MapView, BtnCenter } from './components'
+import { BtnCenter } from './components'
 
+// este componente tendra elementos de la vista map como botones, etc...
+// no rederiza el mapa el mapa e parrte de layout general
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline fixed z-30 mx-[50px] my-4">ChivoMap</h1>
-      <p>Project in progress</p>
-      <MapView />
       <BtnCenter />
     </>
   )
