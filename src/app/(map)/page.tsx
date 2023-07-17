@@ -1,4 +1,4 @@
-
+import { MapView } from './components/MapView'
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <div>
         <h1 className="text-3xl font-bold underline">ChivoMap</h1>
         <p>Project in progress</p>
+        <MapView></MapView>
       </div>
     </main>
   )

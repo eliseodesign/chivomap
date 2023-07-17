@@ -16,7 +16,7 @@ const Links = [
 
 export const Nav = () => {
   return (
-    <nav className="px-7 bg-primary shadow-lg max-w-md rounded-xl">
+    <nav className="px-7 bg-primary shadow-lg max-w-md rounded-xl z-10">
       <div className="flex">
         {
           Links.map( (link) => {
