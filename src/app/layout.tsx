@@ -25,7 +25,11 @@ export default function RootLayout({
         <h1 className="text-3xl font-bold underline fixed z-30 mx-[50px] my-4">ChivoMap</h1>
         <MapView />
 
-        {children}
+        <section className='w-full flex items-center justify-center  text-white left-0 bottom-40 z-50 fixed'>
+          <article className='bg-primary w-full max-w-md'>
+            {children}
+          </article>
+        </section>
 
         {/* nav component */}
         <div className="fixed bottom-2 w-full flex items-center justify-center nav-component">

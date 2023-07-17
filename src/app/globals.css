@@ -40,3 +40,10 @@ a {
 body.leaflet-dragging .nav-component{
   transform: translateY(80px);
 }
+
+/* estilo para las pages execto la principal ->  "/" */
+.pageview {
+  /* w-screen h-[70vh] */
+  width: 100vw;
+  height: 70vh;
+}

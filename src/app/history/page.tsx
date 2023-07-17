@@ -1,6 +1,6 @@
 export default function Acout(){
   return (
-    <div>
+    <div className="pageview">
       <h1>Tus busquedas</h1>
     </div>
   )

@@ -4,8 +4,8 @@ import { BtnCenter } from './components'
 // no rederiza el mapa el mapa e parrte de layout general
 export default function Home() {
   return (
-    <>
+    <div className=''>
       <BtnCenter />
-    </>
+    </div>
   )
 }
