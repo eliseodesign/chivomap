@@ -31,3 +31,12 @@ a {
 .group:hover .group-hover\:flex-grow {
   flex-grow: 1;
 }
+
+/* leaflet */
+
+.nav-component{
+  transition: transform .3s ease;
+}
+body.leaflet-dragging .nav-component{
+  transform: translateY(80px);
+}
