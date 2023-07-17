@@ -7,8 +7,6 @@ export const maxBounds = [
   [12.69081759856763, -86.78025214552537] //limite top right
 ]
 
-/** Valor inicial de coordenadas para centrar */
-export const initialCenter = {lat: 13.758960, lng:-89.653892}
 
 /**(Necesario)Componente de contribucción */
 export const Contribution = () => <TileLayer
