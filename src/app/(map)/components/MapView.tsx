@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 // import { Contribution } from './ConfigMap'
 import { useMapStore } from '@/shared/store/mapStore'
 import { useEffect } from 'react'
+import { maxBounds } from './ConfigMap'
 import 'leaflet/dist/leaflet.css';
 
 
@@ -30,7 +31,15 @@ export const MapView = () => {
   }, []);
 
   return (
-    <MapContainer center={center} zoom={zoom} className="w-screen h-screen fixed top-0 left-0">
+    <MapContainer 
+    
+      center={center} 
+      zoom={zoom} 
+      className="w-screen h-screen fixed top-0 left-0"
+      maxBounds={maxBounds} maxBoundsViscosity={1.0}
+      minZoom={8}
+      >
+        
       <Contribution />
     </MapContainer>
   );

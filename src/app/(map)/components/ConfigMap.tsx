@@ -1,12 +1,12 @@
 'use client'
+import { LatLngBoundsExpression } from 'leaflet';
 import { TileLayer } from 'react-leaflet';
 
 /**Limite en el mapa */
-export const maxBounds = [
-  [14.832454558635783, -90.7462032685763], // limite top left
-  [12.69081759856763, -86.78025214552537] //limite top right
+export const maxBounds: LatLngBoundsExpression | undefined = [
+  [17.838768214469866, -91.00994252677712], // limite top left
+  [11.214449814812207, -85.6233130419287] //limite top right
 ]
-
 
 /**(Necesario)Componente de contribucción */
 export const Contribution = () => <TileLayer
