@@ -34,16 +34,21 @@ a {
 
 /* leaflet */
 
-.nav-component{
+.out-bottom, .out-top {
   transition: transform .3s ease;
 }
-body.leaflet-dragging .nav-component{
+body.leaflet-dragging .out-bottom {
   transform: translateY(80px);
+} 
+
+body.leaflet-dragging .out-top{
+  transform: translateY(-55px);
 }
+
 
 /* estilo para las pages execto la principal ->  "/" */
 .pageview {
   /* w-screen h-[70vh] */
   width: max-content;
-  height: 70vh;
+  height: calc(100vh - 140px);
 }
