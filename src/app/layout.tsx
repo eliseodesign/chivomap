@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Nav } from '@/shared/components/Nav'
+import { Nav, LayerModal} from '@/shared/components'
 // map components
 import { MapView } from '@/app/(map)/components'
 
@@ -25,16 +25,19 @@ export default function RootLayout({
         <h1 className="text-3xl font-bold underline fixed z-30 mx-[50px] my-4">ChivoMap</h1>
         <MapView />
 
-        <section className='w-full flex items-center justify-center  text-white left-0 bottom-40 z-50 fixed'>
-          <article className='bg-primary w-full max-w-md'>
+        <section className='w-full max-w-2xl mx-auto flex items-center justify-center text-gray-200 z-50 fixed left-1/2 transform -translate-x-1/2 bottom-[120px]'>
+          
+          <article className='bg-primary w-11/12 rounded opacity-80 mx-auto'>  
             {children}
           </article>
         </section>
 
         {/* nav component */}
-        <div className="fixed bottom-2 w-full flex items-center justify-center nav-component">
+        <div className="fixed bottom-2 w-full flex items-center justify-center z-50 nav-component">
           <Nav />
         </div>
+
+        <LayerModal />
       </body>
     </html>
   )
