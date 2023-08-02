@@ -12,13 +12,16 @@ export function GeoDistritos() {
 
   const topo = data as DistritosData
 
+  console.log(topo)
+
   useEffect(() => {
-  
-    if (topo && topo.objects && topo.objects.layername) {
-      // Convierte el TopoJSON a GeoJSON utilizando la función feature
-      const geojson = feature(topo, topo.objects.layername);
+    console.log('USE EFFECT')
+    if (topo && topo.objects && topo.objects.collection) {
+      console.log('INTO')
+      const geojson = feature(topo, topo.objects.collection);
       setGeojsonData(geojson);
     }
+    
   }, [topo]);
   
   

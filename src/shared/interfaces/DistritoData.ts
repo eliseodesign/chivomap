@@ -1,7 +1,8 @@
-import { Topology, GeometryCollection  } from 'topojson-specification';
+import { Topology, GeometryCollection } from 'topojson-specification';
+import { GeoJsonProperties } from 'geojson';
 
 export interface DistritosData extends Topology {
   objects: {
-    layername: GeometryCollection<{}>;
+    collection: GeometryCollection<GeoJsonProperties>;
   };
 }
