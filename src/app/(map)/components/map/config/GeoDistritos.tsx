@@ -3,18 +3,14 @@ import React, { useEffect, useState} from 'react'
 import { GeoJSON } from 'react-leaflet'
 // import turf from '@turf/turf';
 import { feature } from 'topojson-client' // Importa la función feature para convertir el TopoJSON a GeoJSON
-import { Topology, GeometryCollection  } from 'topojson-specification';
+import { DistritosData  } from '@/shared/interfaces/DistritoData';
 import data from '@/shared/assets/topo.json'
 
-interface MunicipiosData extends Topology {
-  objects: {
-    layername: GeometryCollection<{}>;
-  };
-}
+
 export function GeoDistritos() {
   const [geojsonData, setGeojsonData] = useState<any>(null);
 
-  const topo = data as MunicipiosData
+  const topo = data as DistritosData
 
   useEffect(() => {
   

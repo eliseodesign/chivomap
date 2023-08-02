@@ -7,9 +7,12 @@ import 'leaflet/dist/leaflet.css';
 const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), {
   ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
 });
-const GeoMunicipios = dynamic(() => import('./config').then((mod) => mod.GeoDistritos), {
+const GeoDistritos = dynamic(() => import('./config').then((mod) => mod.GeoDistritos), {
   ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
 });
+// const GeoDepartamentos = dynamic(() => import('./config').then((mod) => mod.GeoDepartamentos), {
+//   ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
+// });
 const Contribution = dynamic(() => import('./config').then((mod) => mod.Contribution), {
   ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
 });
@@ -35,7 +38,8 @@ export const MapView = () => {
       maxBoundsViscosity={1.0}
       minZoom={8}
     >
-      <GeoMunicipios />
+      <GeoDistritos />
+      {/* <GeoDepartamentos /> */}
       <Contribution />
     </MapContainer>
   );
