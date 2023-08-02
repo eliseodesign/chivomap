@@ -28,7 +28,7 @@ export function GeoDistritos() {
   const getPolygonStyle = (feature) => {
     const D = feature.properties.D;
     const M = feature.properties.M;
-    let color = Departamentos[D] || '#000'
+    let color = Departamentos[D] || 'transparent'
    
 
     return {

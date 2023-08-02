@@ -5,7 +5,8 @@ import { merge } from 'topojson-client';
 
 export function GeoPais() {
   // Unificar los polígonos para formar el polígono más grande
-  const mergedPolygon = merge(data, data.objects.collection.geometries);
+  const filtrados = data.objects.collection.geometries.filter( el => el.properties.NAM !== 'Zona En Proceso De Demarcación')
+  const mergedPolygon = merge(data, filtrados);
 
   // Estilo para el polígono unificado (con relleno transparente y borde)
   const mergedPolygonStyle = {
