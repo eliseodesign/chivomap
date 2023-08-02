@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(map)/components/map/config/GeoDistritos.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(map)/components/map/config/GeoDistritos.jsx", "src/app/(map)/components/map/config/GeoDepartamentos.jsx"],
   "exclude": ["node_modules"]
 }
