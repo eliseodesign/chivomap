@@ -10,7 +10,6 @@ import data from '@/shared/assets/topo.json'
 export function GeoDistritos() {
   const [geojsonData, setGeojsonData] = useState(null);
 
-  // const topo = data as DistritosData
 
   console.log(data)
 
@@ -22,7 +21,7 @@ export function GeoDistritos() {
       setGeojsonData(geojson);
     }
     
-  }, [data]);
+  }, []);
   
   
 
