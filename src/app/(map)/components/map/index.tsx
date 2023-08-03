@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useMapStore } from '@/shared/store/mapStore';
 import 'leaflet/dist/leaflet.css';
 
@@ -28,34 +29,49 @@ export const MapView = () => {
   const { center, zoom } = config;
 
   const handleMapLoad = () => {
-    setTimeout(()=>{
+    setTimeout(() => {
       setMapReady(true);
-    },500)
+    }, 1000)
   };
 
 
   return (
-    <MapContainer
-      center={center}
-      zoom={zoom}
-      className="w-screen h-screen fixed top-0 left-0"
-      maxBounds={[
-        [17.838768214469866, -91.00994252677712], // limite top left
-        [11.214449814812207, -85.6233130419287], //limite top right
-      ]}
-      maxBoundsViscosity={1.0}
-      minZoom={8}
-      whenReady={handleMapLoad}
-    >
-      <Contribution />
-      {/* Renderizar los componentes cuando estén listos */}
-      {mapReady && (
+    <>
+      {mapReady ? null
+        : 
         <>
-          <GeoDepartamentos />
-          <GeoDistritos />
-          <GeoPais />
-        </>
-      )}
-    </MapContainer>
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <span className='text-center text-gray-300 text-2xl font-bold'>Cargando...</span>
+        </div>
+          <Image 
+            className='top-0 left-0 w-screen h-screen filter brightness-[0.25] blur-md z-50' 
+            src='/placeholderMap.webp' 
+            alt='map' 
+            height={200} width={500} />
+        </>}
+      <MapContainer
+        center={center}
+        zoom={zoom}
+        className="w-screen h-screen fixed top-0 left-0"
+        maxBounds={[
+          [17.838768214469866, -91.00994252677712], // limite top left
+          [11.214449814812207, -85.6233130419287], //limite top right
+        ]}
+        maxBoundsViscosity={1.0}
+        minZoom={8}
+        whenReady={handleMapLoad}
+      >
+        <Contribution />
+        {/* Renderizar los componentes cuando estén listos */}
+        {mapReady && (
+          <>
+            <GeoDepartamentos />
+            <GeoDistritos />
+            <GeoPais />
+          </>
+        )}
+      </MapContainer>
+    </>
+
   );
 };
