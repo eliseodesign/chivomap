@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useMapStore } from '@/shared/store/mapStore';
 import 'leaflet/dist/leaflet.css';
+import placeholderMap from './config/placeholderMap.webp'
 
 const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), {
   ssr: false,
@@ -45,7 +46,7 @@ export const MapView = () => {
         </div>
           <Image 
             className='top-0 left-0 w-screen h-screen filter brightness-[0.25] blur-md z-50' 
-            src='/placeholderMap.webp' 
+            src={placeholderMap} 
             alt='map' 
             height={200} width={500} />
         </>}
