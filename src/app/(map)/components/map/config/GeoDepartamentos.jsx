@@ -47,8 +47,8 @@ export function GeoDepartamentos() {
   const polygonStyle = {
     fillColor: 'transparent',
     fillOpacity: 0,
-    color: 'black', // Color de la línea del polígono
-    weight: 2, // Grosor de la línea del polígono
+    color: '#666', // Color de la línea del polígono
+    weight: 3, // Grosor de la línea del polígono
   };
 
   return (

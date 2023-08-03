@@ -49,7 +49,7 @@ body.leaflet-dragging .out-top{
 /* estilo para las pages execto la principal ->  "/" */
 .pageview {
   /* w-screen h-[70vh] */
-  width: max-content;
+  width: 100%;
   height: calc(100vh - 140px);
 }
 

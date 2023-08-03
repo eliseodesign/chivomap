@@ -52,7 +52,7 @@ export function GeoDistritos() {
       fillOpacity: .35, // Opacidad del relleno en 0 (transparente)
       color: color,
       weight: 1,
-      dashArray: [5, 5],
+      dashArray: [1, 1],
     };
   };
 
