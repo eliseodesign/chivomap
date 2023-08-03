@@ -6,8 +6,8 @@ import { TileLayer } from 'react-leaflet';
 
 /**(Necesario)Componente de contribucción */
 export const Contribution = () => <TileLayer
-attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+attribution='&copy; <a href="https://carto.com/">Carto</a> contributors'
+url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
 />
 
 export * from "./GeoDepartamentos"

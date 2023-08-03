@@ -33,7 +33,7 @@ export function GeoDistritos() {
 
     return {
       fillColor: color, // Relleno transparente
-      fillOpacity: .6, // Opacidad del relleno en 0 (transparente)
+      fillOpacity: .35, // Opacidad del relleno en 0 (transparente)
       color: color,
       weight: 1,
       dashArray: [5, 5],
