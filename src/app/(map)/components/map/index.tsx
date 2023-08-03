@@ -11,7 +11,15 @@ const Contribution = dynamic(() => import('./config').then((mod) => mod.Contribu
   ssr: false,
 });
 
-import { GeoDepartamentos, GeoDistritos, GeoPais } from './config';
+const GeoDepartamentos = dynamic(() => import('./config').then((mod) => mod.GeoDepartamentos), {
+  ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
+});
+const GeoDistritos = dynamic(() => import('./config').then((mod) => mod.GeoDistritos), {
+  ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
+});
+const GeoPais = dynamic(() => import('./config').then((mod) => mod.GeoPais), {
+  ssr: false, // Indicar a Next.js que no renderice esto en el lado del servidor
+});
 
 export const MapView = () => {
   const [mapReady, setMapReady] = useState(false);
